@@ -1,0 +1,4 @@
+How To Compile..
+
+   g++ -Wall -pedantic -o isomod
+
