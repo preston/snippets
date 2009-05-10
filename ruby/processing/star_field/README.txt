@@ -1,0 +1,1 @@
+This mini-project demonstrates how to create a highly asynchronous simulation environment using ruby-processing leveraging JRuby's native thread capabilities.
