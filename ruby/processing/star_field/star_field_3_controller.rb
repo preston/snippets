@@ -9,7 +9,7 @@ class StarfieldSimulator < Processing::App
   
   load_library :opengl
 
-  NUM_STARS = 200;
+  NUM_STARS = 400;
   CAMERA_SPEED = 20 # Pixels per wall second.
   CAMERA_ROTATE_SPEED = 0.08 # Radians per wall second.
   FRAME_RATE = 30 # Target frame per second.
@@ -25,6 +25,8 @@ class StarfieldSimulator < Processing::App
     end
     @mouse_last_x = nil 
     @mouse_last_y = nil
+    @active = true
+    @active_mutex = Mutex.new
     text_font load_font("Univers66.vlw.gz"), 1.0
   end
 
@@ -71,9 +73,20 @@ class StarfieldSimulator < Processing::App
   end
   
   
+
+  
   def key_pressed
     # puts "KEY_PRESSED: #{key_code}"
     handle_camera_change_start
+    case key_code
+    when TAB:
+      @active_mutex.synchronize do
+        @stars.each do |s|
+          @active ? s.deactivate : s.activate
+        end
+        @active = !@active
+      end
+    end
   end
   
   def key_released

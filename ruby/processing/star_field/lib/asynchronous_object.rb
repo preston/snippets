@@ -11,12 +11,12 @@ class AsychronousObject
     # puts @update_freqency
     @mutex = Mutex.new
     
-    @state = :active # or :inactive
-    @last_updated = Time.now
     start
   end
   
   def start
+    @last_updated = Time.now
+    @state = :active # or :inactive
     # puts @mutex
     @thread = Thread.new do
       keep_going = true

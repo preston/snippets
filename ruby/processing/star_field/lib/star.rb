@@ -5,7 +5,7 @@ class Star < AsychronousObject
   attr_reader :x, :y, :z
   
   DEFAULT_UPDATE_FREQUENCY = 0.05 # In seconds.
-  DEFAULT_CLIPPING_PLANE = 1400 # The universe is a giant cube, with each side being this long.
+  DEFAULT_CLIPPING_PLANE = 1800 # The universe is a giant cube, with each side being this long.
   
   def initialize(freq = DEFAULT_UPDATE_FREQUENCY, clip = DEFAULT_CLIPPING_PLANE)
     @clipping_plane = clip
