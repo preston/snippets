@@ -1,6 +1,6 @@
 # Copyright © 2009 Preston Lee. All rights reserved.
 
-require 'lib/star'
+require 'star'
 
 NUM_STARS = 100
 SECONDS = 10.0

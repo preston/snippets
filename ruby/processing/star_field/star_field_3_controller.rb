@@ -1,7 +1,7 @@
 # Copyright © 2009 Preston Lee. All rights reserved.
 
 
-require 'lib/drawable_star'
+require 'drawable_star'
 
 
 class StarfieldSimulator < Processing::App
@@ -75,9 +75,20 @@ class StarfieldSimulator < Processing::App
   
 
   
+  # def key_pressed
+  #   # puts "KEY_PRESSED: #{key_code}"
+  #   handle_camera_change_start
+  #   # handle_pause_and_resume
+
+  # end
+  
   def key_pressed
     # puts "KEY_PRESSED: #{key_code}"
     handle_camera_change_start
+    handle_pause_and_resume
+  end
+  
+  def handle_pause_and_resume
     case key_code
     when TAB:
       @active_mutex.synchronize do
@@ -88,6 +99,7 @@ class StarfieldSimulator < Processing::App
       end
     end
   end
+  
   
   def key_released
     # puts "KEY_RELEASED: #{key_code}"

@@ -1,6 +1,6 @@
 # Copyright © 2009 Preston Lee. All rights reserved.
 
-require 'lib/drawable_star'
+require 'drawable_star'
 
 
 class StarfieldSimulator < Processing::App
