@@ -1,3 +1,0 @@
-
-org.jruby.Main lib/ruby-processing/runners/run.rb lib/twiverse.rb
-core/jruby-complete.jar
