@@ -12,9 +12,9 @@ struct position {
 	int x;
 	int y;
 	int z;
-	// char c1;
-	// char c2;
-	// char c3;
+	char c1;
+	char c2;
+	char c3;
 	// char c4;
 };
 
@@ -36,7 +36,7 @@ int main()
 	
 	size = sizeof(struct coordinates);
 	printf("How big is a coordinate struct? %u\n", size);
-
+	
 	size = sizeof(struct woozle);
 	printf("How big is a woozle? %u\n", size);
 	

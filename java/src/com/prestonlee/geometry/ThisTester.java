@@ -4,7 +4,7 @@ public class ThisTester {
 
 	public static void main(String[] args) {
 		Position p = new Position();
-		p.whatIsThis();
+//		p.whatIsThis();
 	}
 
 }
