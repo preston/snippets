@@ -1,9 +1,13 @@
 package com.prestonlee.vehicle;
 
-import java.util.Iterator;
-import java.util.List;
 import java.util.Vector;
 
+/**
+ * Driver/Test class for Vehicle (and subclasses thereof).
+ * 
+ * @author Preston Lee
+ *
+ */
 public class VehicleTest {
 
 	

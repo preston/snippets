@@ -1,5 +1,11 @@
 package com.prestonlee.vehicle;
 
+/**
+ * Subclass example.
+ * 
+ * @author Preston Lee
+ *
+ */
 public class Car extends Vehicle {
 
 	protected boolean hatchback;
