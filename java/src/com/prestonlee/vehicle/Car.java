@@ -9,8 +9,7 @@ package com.prestonlee.vehicle;
 public class Car extends Vehicle {
 
 	protected boolean hatchback;
-
-
+	
 	public boolean isHatchback() {
 		return hatchback;
 	}
@@ -18,11 +17,15 @@ public class Car extends Vehicle {
 	public void setHatchback(boolean pHatchback) {
 		hatchback = pHatchback;
 	}
-
+	
+	@Override
+	public int getNumberDoors() {
+		return 4;
+	}
 
 	@Override
 	public String toString() {
-		return "CAR: " + super.toString();
+		return "CAR: " + getYear() + " " + getMake() + " " + getModel();
 	}
 	
 }

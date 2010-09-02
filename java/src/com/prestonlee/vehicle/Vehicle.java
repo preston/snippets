@@ -6,19 +6,30 @@ package com.prestonlee.vehicle;
  * @author Preston Lee
  * 
  */
-public class Vehicle {
+public abstract class Vehicle {
 
 	protected String make;
 
 	protected String model;
 
 	protected int year;
+	
+//	public Vehicle(String _make, String _model, int _year) {
+//		setMake(_make);
+//		setModel(_model);
+//		setYear(_year);
+//	}
 
+	
+	public abstract int getNumberDoors();
+	
 	public String getMake() {
 		return make;
 	}
 
 	public void setMake(String pMake) {
+		// LOG msg
+		System.out.println("SETMAKE ACCESSED!!");
 		make = pMake;
 	}
 
@@ -36,11 +47,6 @@ public class Vehicle {
 
 	public void setYear(int pYear) {
 		year = pYear;
-	}
-
-	@Override
-	public String toString() {
-		return getYear() + " " + getMake() + " " + getModel();
 	}
 
 }
