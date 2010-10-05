@@ -8,9 +8,9 @@ package com.prestonlee.vehicle;
  */
 public abstract class Vehicle {
 
-	protected String make;
+	protected String make = "";
 
-	protected String model;
+	protected String model = "";
 
 	protected int year;
 	
@@ -28,9 +28,9 @@ public abstract class Vehicle {
 	}
 
 	public void setMake(String pMake) {
-		// LOG msg
-		System.out.println("SETMAKE ACCESSED!!");
-		make = pMake;
+		if(pMake != null) {
+			make = pMake;
+		}
 	}
 
 	public String getModel() {
