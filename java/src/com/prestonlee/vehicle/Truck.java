@@ -7,10 +7,16 @@ package com.prestonlee.vehicle;
  *
  */
 public class Truck extends Vehicle {
+	
+	@Override
+	public int getNumberDoors() {
+		return 2;
+	}
 
 	@Override
 	public String toString() {
-		return "TRUCK: " + super.toString();
+		return "TRUCK: " + getYear() + " " + getMake() + " " + getModel();
 	}
+
 	
 }
